@@ -50,7 +50,6 @@ export async function PATCH(
         const updateApplicant = await prismadb.applicant.updateMany({
             where:{
                 id: params.id,
-                userId: userId
             },
             data:{
                 firstname: firstname,
