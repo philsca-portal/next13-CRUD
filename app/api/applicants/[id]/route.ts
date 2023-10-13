@@ -18,10 +18,6 @@ export async function PATCH(
                 appointmentdate,
                 role } = body;
 
-        if(!userId){
-            return new NextResponse("Unauthorized.", { status: 401 });
-        }
-
         if(!firstname){
             return new NextResponse("Firstname is required.", { status: 400 });
         }
